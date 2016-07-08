@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/app_title_bar"
+        android:id="@+id/include" />
+
+    <LinearLayout
+
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_above="@+id/timerr"
+        android:layout_alignEnd="@+id/login"
+        android:layout_marginBottom="44dp">
+
+        <RadioGroup
+            android:id="@+id/radioSex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <RadioButton
+                android:id="@+id/hour_12"
+                android:layout_width="wrap_content"
+                android:text="12 hour"
+                android:textSize="16dp"
+                android:checked="true"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/hour_24"
+                android:text="24 hour"
+                android:textSize="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+    </LinearLayout>
+
+   <!-- <TextView
+        android:layout_below="@+id/check"
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="50sp"
+        android:textColor="@android:color/black" />-->
+    <TextClock
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="50sp"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        />
+    <TextClock
+        android:id="@+id/timerr"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="50sp"
+        android:layout_height="wrap_content"
+      />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timerr"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:text="Login"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/logged_in_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/black"
+        android:text="Logged in time :"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/logged_out_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logged_in_time"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/black"
+        android:text="Logged Out time :"/>
+
+</RelativeLayout>
